@@ -30,7 +30,7 @@ You can use the ADS1015 in two ways
 
 As a reader:
 
-```
+```java
 Ads1015.Factory factory = new Ads1015.Factory();
 ads1015 = factory.newAds1015("I2C1", 0x48, Ads1015.Gain.TWO_THIRDS);
         
@@ -40,7 +40,7 @@ Log.d("TUT", "Read value " + valueInMv);;
 
 As a comparator:
 
-```
+```java
 Ads1015.Factory factory = new Ads1015.Factory();
 ads1015 = factory.newAds1015("I2C1", 0x48, Ads1015.Gain.TWO_THIRDS, "GPIO23");
 ads1015.startComparator(Ads1015.Channel.ONE_AND_THREE, 2000, comparatorCallback);
