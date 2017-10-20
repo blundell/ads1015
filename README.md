@@ -36,6 +36,9 @@ ads1015 = factory.newAds1015("I2C1", 0x48, Ads1015.Gain.TWO_THIRDS);
         
 int valueInMv = ads1015.read(Ads1015.Channel.ONE)
 Log.d("TUT", "Read value " + valueInMv);;
+
+
+ads1015.close();
 ```
 
 As a comparator:
@@ -51,4 +54,6 @@ private final Ads1015.ComparatorCallback comparatorCallback = new Ads1015.Compar
         Log.d("TUT", "Threshold hit, with value " + valueInMv);
     }
 };
+
+ads1015.close();
 ```
