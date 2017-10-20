@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="5dip">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Select your config:" />
+
+  <ToggleButton
+    android:id="@+id/main_toggle_read_compare"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dip"
+    android:textOff="Read (the channel)"
+    android:textOn="Compare (the channel to a threshold)" />
+
+  <TextView
+    android:id="@+id/main_text_compare_threshold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Select your comparator threshold:"
+    android:visibility="gone" />
+
+  <EditText
+    android:id="@+id/main_edittext_compare_threshold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dip"
+    android:hint="threshold"
+    android:visibility="gone" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Select your channel:" />
+
+  <RadioGroup
+    android:id="@+id/differential_radio_pin_select"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dip"
+    android:checkedButton="@id/diff_pins_0">
+
+    <RadioButton
+      android:id="@+id/diff_pins_0"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="0" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="1" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="2" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="3" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_0_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="0 and 1" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_0_3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="0 and 3" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_1_3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="1 and 3" />
+
+    <RadioButton
+      android:id="@+id/diff_pins_2_3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="2 and 3" />
+
+  </RadioGroup>
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="onStartDemo"
+    android:text="Start demo!" />
+
+
+</LinearLayout>
