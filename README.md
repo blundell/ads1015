@@ -57,3 +57,5 @@ private final Ads1015.ComparatorCallback comparatorCallback = new Ads1015.Compar
 
 ads1015.close();
 ```
+
+![](/ADS1015-connected.png)
