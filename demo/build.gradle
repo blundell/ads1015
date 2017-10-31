@@ -16,7 +16,7 @@ android {
 dependencies {
     compile project(':library')
 
-    compileOnly 'com.google.android.things:androidthings:+'
+    compileOnly 'com.google.android.things:androidthings:0.5.1-devpreview'
 
     testImplementation 'junit:junit:4.12'
 
