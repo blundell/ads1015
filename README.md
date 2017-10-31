@@ -16,11 +16,9 @@ How to use the driver
 To use the `ads1015` driver, simply add the line below to your project's `build.gradle`,
 where `<version>` matches the last version of the driver available on [jcenter][jcenter].
 
-// TODO NOT RELEASED YET
-
 ```
 dependencies {
-    compile 'com.blundell:driver-ads1015:<version>'
+    compile 'com.blundell:driver-ads1015:<latest-version>'
 }
 ```
 
