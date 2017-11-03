@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 26
@@ -21,5 +22,23 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compileOnly 'com.google.android.things:androidthings:+'
+    compileOnly 'com.google.android.things:androidthings:0.5.1-devpreview'
+}
+
+publish {
+    userOrg = 'blundell'
+    groupId = 'com.blundell'
+    artifactId = 'ads1015'
+    version = "0.0.3"
+    description = 'ADS1015 AndroidThings driver (12bit Analog to Digital converter and OpAmp)'
+    website = "https://github.com/blundell/ads1015"
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.7.0'
+    }
 }

@@ -107,21 +107,21 @@ public interface Ads1015 {
         /**
          * Use this constructor if you are not going to use the comparator for threshold callbacks
          *
-         * @param i2CBus
-         * @param i2cAddress
-         * @param gain
-         * @return
+         * @param i2CBus the name of the bus
+         * @param i2cAddress the address of the ADS
+         * @param gain the amount of gain
+         * @return a fully instantiated ADS1015 (cannot be used as a comparator)
          */
         public Ads1015 newAds1015(String i2CBus, int i2cAddress, Gain gain) {
             return newAds1015(i2CBus, i2cAddress, gain, "");
         }
 
         /**
-         * @param i2CBus
-         * @param i2cAddress
-         * @param gain
-         * @param alertReadyGpioPinName
-         * @return
+         * @param i2CBus the name of the bus
+         * @param i2cAddress the address of the ADS
+         * @param gain the amount of gain
+         * @param alertReadyGpioPinName gpio pin to get callbacks on of a change
+         * @return a fully instantiated ADS1015 (including comparator)
          */
         public Ads1015 newAds1015(String i2CBus, int i2cAddress, Gain gain, String alertReadyGpioPinName) {
             I2cDevice i2cDevice;
