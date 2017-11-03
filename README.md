@@ -8,6 +8,8 @@ See the [/demo](/demo) module for a working example
 
 AndroidThings port of https://github.com/adafruit/Adafruit_ADS1X15
 
+Matchign blog post http://blog.blundellapps.co.uk/tut-android-things-using-the-ads1015-analog-to-digital-converter-driver-library/
+
 How to use the driver
 ---------------------
 
@@ -57,3 +59,10 @@ ads1015.close();
 ```
 
 ![](/ADS1015-connected.png)
+
+### Demo
+
+There is a demo app that you can run if you want to test the library without writing any code (just remember to wire in your analog sensors).
+
+![](/demo.jpg)
+
