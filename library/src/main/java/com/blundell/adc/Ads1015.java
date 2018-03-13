@@ -2,7 +2,7 @@ package com.blundell.adc;
 
 import com.google.android.things.pio.Gpio;
 import com.google.android.things.pio.I2cDevice;
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 
 import java.io.IOException;
 
@@ -125,7 +125,7 @@ public interface Ads1015 {
          */
         public Ads1015 newAds1015(String i2CBus, int i2cAddress, Gain gain, String alertReadyGpioPinName) {
             I2cDevice i2cDevice;
-            PeripheralManagerService service = new PeripheralManagerService();
+            PeripheralManager service = PeripheralManager.getInstance();
             try {
                 i2cDevice = service.openI2cDevice(i2CBus, i2cAddress);
             } catch (IOException e) {
